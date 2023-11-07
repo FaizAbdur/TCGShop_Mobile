@@ -1,4 +1,4 @@
-#TCG Shop Mobile 
+# TCG Shop Mobile 
 
 ![Introduction](https://img.yugioh-card.com/en/wp-content/uploads/2020/04/yugioh-share.jpg)
 
