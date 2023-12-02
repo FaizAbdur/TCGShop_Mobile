@@ -8,8 +8,124 @@
 - 2206824041
 
 
+## Tugas 9
 
-## Tugas 1 
+### Pengambilan Data JSON tanpa Membuat Model:
+
+1. **Pengambilan Data JSON tanpa Model:**
+   - Ya, bisa dilakukan. Tetapi, membuat model biasanya disarankan karena:
+     - Membuat struktur data lebih jelas dan mudah dimengerti.
+     - Mempermudah penanganan dan pengolahan data.
+
+2. **Keuntungan Membuat Model:**
+   - Type safety: Mengurangi peluang kesalahan tipe data.
+   - Struktur data yang didefinisikan membantu dokumentasi dan pengembangan.
+   - Meningkatkan keterbacaan kode.
+
+### CookieRequest dan Pembagian Instance ke Komponen di Aplikasi Flutter:
+
+1. **CookieRequest:**
+   - Fungsi: Representasi permintaan HTTP yang menyimpan dan menangani cookie.
+   - Instance Perlu Dibagikan: Untuk memastikan pengguna memiliki cookie yang konsisten selama sesi aplikasi, karena instance ini menyimpan dan mengelola cookie.
+
+### Mekanisme Pengambilan Data dari JSON hingga Tampil di Flutter:
+
+1. **Mekanisme Pengambilan Data dari JSON:**
+   - Gunakan `http` package untuk membuat permintaan HTTP ke API.
+   - Terima respons dalam bentuk JSON.
+   - Gunakan model atau konversi manual untuk mengubah data JSON menjadi objek Dart.
+   - Tampilkan data di Flutter menggunakan widget yang sesuai.
+
+### Mekanisme Autentikasi dari Input Akun pada Flutter ke Django:
+
+1. **Mekanisme Autentikasi:**
+   - Input akun di Flutter (biasanya menggunakan `TextField`).
+   - Kirim permintaan ke API Django dengan kredensial pengguna.
+   - Django memeriksa dan mengautentikasi pengguna.
+   - Jika berhasil, Django mengembalikan token atau informasi autentikasi.
+   - Flutter menyimpan token dan menggunakan untuk permintaan berikutnya.
+
+### Widget pada Tugas:
+
+1. **TextField:**
+   - Fungsi: Memungkinkan pengguna memasukkan teks (digunakan untuk input akun).
+
+2. **Http Request Widget (e.g., Dio, http):**
+   - Fungsi: Mengirim permintaan HTTP ke server.
+
+3. **CookieRequest (Custom):**
+   - Fungsi: Menangani permintaan HTTP dengan memastikan cookie dibagikan di seluruh aplikasi.
+
+4. **ListView:**
+   - Fungsi: Menampilkan daftar item, seperti data hasil dari permintaan HTTP.
+
+5. **FutureBuilder:**
+   - Fungsi: Membangun UI berdasarkan hasil dari Future (misalnya, hasil permintaan HTTP).
+
+6. **Authentication Service (Custom):**
+   - Fungsi: Menangani logika autentikasi, termasuk penyimpanan token.
+
+7. **Menu Widget:**
+   - Fungsi: Menampilkan menu aplikasi setelah autentikasi berhasil.
+
+Dengan widget-widget tersebut, aplikasi Flutter dapat mengelola autentikasi, berkomunikasi dengan server Django, dan menampilkan data dengan baik.
+
+## Tugas 8 
+### Perbedaan antara Navigator.push() dan Navigator.pushReplacement()
+
+1. **Navigator.push():**
+   - Digunakan untuk menambahkan rute baru ke dalam tumpukan rute.
+   - Pengguna dapat kembali ke rute sebelumnya dengan tombol kembali.
+   - Contoh:
+     ```dart
+     Navigator.push(
+       context,
+       MaterialPageRoute(builder: (context) => SecondScreen()),
+     );
+     ```
+
+2. **Navigator.pushReplacement():**
+   - Menggantikan rute saat ini dengan rute baru.
+   - Berguna jika tidak ingin pengguna dapat kembali ke rute sebelumnya.
+   - Contoh:
+     ```dart
+     Navigator.pushReplacement(
+       context,
+       MaterialPageRoute(builder: (context) => ThirdScreen()),
+     );
+     ```
+
+### Layout Widget pada Flutter dan Konteks Penggunaannya
+
+1. **Container:**
+   - **Konteks Penggunaan:** Menempatkan dan mengatur tata letak widget di dalamnya.
+  
+2. **Row dan Column:**
+   - **Konteks Penggunaan:** Mengatur widget dalam satu baris atau satu kolom secara berurutan.
+  
+3. **ListView:**
+   - **Konteks Penggunaan:** Menampilkan daftar widget yang dapat digulir.
+  
+4. **AppBar:**
+   - **Konteks Penggunaan:** Menyediakan baris judul dan ikon di bagian atas aplikasi.
+
+### Elemen Input pada Form
+
+1. **TextField:**
+   - **Penggunaan:** Digunakan untuk input teks. Pada contoh checklist, digunakan untuk memberi nama pada setiap item.
+  
+2. **CheckboxListTile:**
+   - **Penggunaan:** Elemen input ini digunakan sebagai elemen checklist untuk memilih atau menonaktifkan setiap item.
+
+### Penerapan Clean Architecture pada Aplikasi Flutter
+
+- **Langkah-langkah:**
+  1. **Presentasi (UI):** Menyimpan tampilan dan logika UI.
+  2. **Domain (Logika Bisnis):** Menyimpan logika bisnis independen dari kerangka kerja dan perangkat lunak eksternal.
+  3. **Data (Sumber Daya Eksternal):** Menyimpan kode yang berhubungan dengan sumber daya eksternal seperti API atau database.
+
+
+## Tugas 7
 
 
 **Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?**
